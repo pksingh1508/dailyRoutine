@@ -1,0 +1,5 @@
+:root {
+    
+    --hue-color: 250;
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+  }

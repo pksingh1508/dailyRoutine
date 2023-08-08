@@ -1,11 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./dist/application.js",
-    "dev": "ts-node ./src/application.ts",
-    "build": "tsc --build"
+    "start": "node ./dist/index.js",
+    "dev": "ts-node ./src/index.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",

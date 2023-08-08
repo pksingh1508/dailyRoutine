@@ -26,6 +26,8 @@ const Signup = () => {
             setShowOtpDiv(true);
         } catch (e) {
             console.log("Error while sending OTP", e);
+            toast.error("signup failed");
+            return;
         }
     }
 
@@ -47,6 +49,8 @@ const Signup = () => {
             }
         } catch (e) {
             console.log("something went wrong", e);
+            toast.error("signup failed");
+            return;
         }
     }
 

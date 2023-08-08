@@ -31,6 +31,8 @@ const Login = () => {
             navigate("/home");
         } catch (err) {
             console.log("something error in login", err);
+            toast.error("Login failed");
+            return;
         }
     }
 

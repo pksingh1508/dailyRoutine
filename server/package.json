@@ -2,8 +2,8 @@
   "name": "server",
   "version": "1.0.0",
   "scripts": {
-    "start": "node ./dist/app.js",
-    "dev": "ts-node ./src/app.ts",
+    "start": "node ./dist/application.js",
+    "dev": "ts-node ./src/application.ts",
     "build": "tsc --build"
   },
   "keywords": [],

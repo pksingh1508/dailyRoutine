@@ -1,9 +1,10 @@
-import { Response, Request, NextFunction } from 'express';
-import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv'
+
+const jwt = require('jsonwebtoken');
+const dotenv = require('dotenv');
+
 dotenv.config();
 
-export const auth = async (req: Request, res: Response, next: NextFunction) => {
+exports.auth = async (req, res, next) => {
     try {
         const authHeader = req.headers.authorization;
         if (authHeader) {
@@ -24,7 +25,7 @@ export const auth = async (req: Request, res: Response, next: NextFunction) => {
                     console.log("error in type of payload");
                     return res.sendStatus(403);
                 }
-                console.log("Payload", payload);
+                // console.log("Payload", payload);
                 req.headers["userId"] = payload.id;
                 next();
             });

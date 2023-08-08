@@ -1,6 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "type": "commonjs",
   "scripts": {
     "start": "node ./dist/application.js",
     "dev": "ts-node ./src/application.ts",

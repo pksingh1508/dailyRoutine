@@ -17,11 +17,13 @@ const Todo = () => {
 
   const getallTodos = async () => {
     try {
+      const toastId = toast.loading("Loading Work..")
       const response = await axios.get(`${import.meta.env.VITE_BASE_URL}todo/getTodo`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       })
       // console.log("All todos", response);
       setTodos(response.data.message);
+      toast.dismiss(toastId);
     } catch (err) {
       console.log("some error in getting todos", err);
     }
